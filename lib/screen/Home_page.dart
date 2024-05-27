@@ -1,4 +1,3 @@
-import 'package:bag_app/utily/mycolors.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,12 +28,46 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+
           ),
           SliverList(delegate: SliverChildListDelegate([
             Card(
               child: Image(image: AssetImage("assets/image/view-bookbag-school-classroom.jpg")),
-            )
-          ]))
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30,right: 30,top: 20,bottom: 20),
+              child: Center(
+                child: Row(children: [
+                  CircleAvatar(radius: 30,child: Icon(Icons.account_balance,size: 40,color: Colors.black,),),
+                  SizedBox( height: 25, width: 50,
+                      ),
+                  CircleAvatar(radius: 30,child: Icon(Icons.card_giftcard,size: 40,color: Colors.black,),),
+                  SizedBox( height: 25, width: 50,
+                      ),
+                  CircleAvatar(radius: 30,child: Icon(Icons.fire_truck_rounded,size: 40,color: Colors.black,),),
+                  SizedBox( height: 25, width: 50,
+                    ),
+                  CircleAvatar(radius: 30,child: Icon(Icons.access_alarm,size: 40,color: Colors.black,),),
+                  SizedBox( height: 25, width: 50,
+                  ),
+                ],),
+              ),
+            ),
+            /*Column(children: [
+              Row(
+                children: [
+                  AppBar(
+                      bottom: TabBar(tabs:[
+                        Text("Categories",style: TextStyle(color: Colors.white,fontSize: 22),),
+                        Text("Branch",style: TextStyle(color: Colors.white,fontSize: 22),),
+                        Text("Shops",style: TextStyle(color: Colors.white,fontSize: 22),)
+                      ])
+                  )
+                ],
+              )
+            ],)*/
+          ]
+          ))
         ],
       ),
 
